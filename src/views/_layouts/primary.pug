@@ -1,0 +1,10 @@
+extends ./index.pug
+
+block body
+  include ../_partials/header.pug
+  main.Main
+    block main
+  include ../_partials/footer.pug
+
+block scripts
+  script(src= SITE_URL + "/js/main.js")
