@@ -7,6 +7,7 @@ const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 const copy = require('gulp-copy');
 const cssnano = require('cssnano');
+const data = require('gulp-data');
 const es = require('event-stream');
 const git = require('./util/git.js');
 const glob = require('glob');
@@ -126,11 +127,17 @@ gulp.task('scripts:production', done => {
 
 /** Views - development task */
 gulp.task('views:development', function() {
+  const locals = {
+    pretty: true,
+    config: require('./config/development.js'),
+    data: require('./data/index.js')
+  };
+
   return gulp.src(views)
-    .pipe(pug({
-      pretty: true,
-      locals: require('./config/development.js')
-    }).on('error', function(error) {
+    .pipe(data(function(file) {
+      return locals;
+    }))
+    .pipe(pug().on('error', function(error) {
       console.log('pug error:', error.message);
       this.emit('end');
     }))
@@ -140,10 +147,16 @@ gulp.task('views:development', function() {
 
 /** Views - production task */
 gulp.task('views:production', function() {
+  const locals = {
+    config: require('./config/production.js'),
+    data: require('./data/index.js')
+  };
+
   return gulp.src(views)
-    .pipe(pug({
-      locals: require('./config/production.js')
-    }).on('error', function(error) {
+    .pipe(data(function(file) {
+      return locals;
+    }))
+    .pipe(pug().on('error', function(error) {
       console.log('pug error:', error);
       process.exit(1);
       this.emit('end');

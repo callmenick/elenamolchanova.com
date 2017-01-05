@@ -12,3 +12,14 @@ $breakpoints: (
     @content;
   }
 }
+
+$gutters: (
+  sm: 0.5rem,
+  md: 1rem,
+  lg: 2rem,
+  xl: 4rem
+);
+
+@mixin gutter($direction, $size) {
+
+}
