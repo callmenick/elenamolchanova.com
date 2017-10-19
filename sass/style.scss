@@ -1,6 +1,7 @@
 // config
 @import "config.variables";
 @import "config.mixins";
+@import "config.functions";
 
 // vendor
 @import "vendor.normalize";
@@ -13,13 +14,3 @@
 @import "elements.headings";
 @import "elements.text";
 @import "elements.media";
-
-// objects
-@import "objects.container";
-@import "objects.header";
-@import "objects.nav";
-@import "objects.main";
-@import "objects.footer";
-
-// components
-@import "components.feed";
