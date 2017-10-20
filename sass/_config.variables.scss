@@ -1,5 +1,14 @@
-$color-brand-500: #673AB7;
-$color-brand-700: #512DA8;
+$color-brand-green: #c0d747;
+$color-brand-green-dark: darken($color-brand-green, 20%);
+$color-brand-green-light: lighten($color-brand-green, 20%);
+
+$color-brand-blue: #67c7cc;
+$color-brand-blue-dark: darken($color-brand-blue, 20%);
+$color-brand-blue-light: lighten($color-brand-blue, 20%);
+
+$color-brand-pink: #ec135e;
+$color-brand-pink-dark: darken($color-brand-pink, 20%);
+$color-brand-pink-light: lighten($color-brand-pink, 20%);
 
 $color-grey-100: #F5F5F5;
 $color-grey-300: #E0E0E0;
