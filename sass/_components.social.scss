@@ -1,0 +1,26 @@
+.Social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
+}
+
+.Social-link {
+  margin: 0 1rem;
+}
+
+.Social-icon {
+  display: block;
+  margin: 0;
+
+  path {
+    fill: $color-brand-pink;
+    transition: fill 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+
+.Social-link:hover .Social-icon {
+  path {
+    fill: $color-brand-pink-dark;
+  }
+}
