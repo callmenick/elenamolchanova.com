@@ -404,7 +404,7 @@ html {
 
 body {
   color: #616161;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Quicksand, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.8; }
@@ -418,89 +418,104 @@ h6 {
   margin: 0;
   padding: 0;
   color: #212121;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Quicksand, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.2; }
 
 a {
-  color: #ec135e;
-  text-decoration: none;
+  color: #616161;
+  text-decoration: underline;
   -webkit-transition: color 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: color 250ms cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 a:hover {
-  color: #f4719e; }
+  color: #212121; }
+
+strong,
+b,
+em,
+i {
+  color: #212121;
+  font-weight: 700;
+  font-style: normal; }
 
 img {
   display: block;
   max-width: 100%;
   height: auto; }
 
-.Wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: auto;
-  padding: 4rem 0;
-  width: 100vw;
-  height: 100vh;
-  min-height: 60rem; }
+.layout {
+  display: grid;
+  grid-template-areas: "header" "about" "about" "footer";
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+  margin: 0 auto;
+  padding: 3rem;
+  max-width: 96rem; }
+  @media (min-width: 640px) {
+    .layout {
+      grid-template-areas: "header header" "about about" "footer footer";
+      grid-template-columns: 1fr 1fr; } }
 
-.Logo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
+.layout-header {
+  grid-area: header; }
 
-.Banner {
-  margin: 4rem 0;
+.layout-footer {
+  grid-area: footer; }
+
+.wrapper {
+  display: grid;
+  grid-template-areas: "header header" "about about"; }
+
+.header {
+  margin: 0 auto;
+  max-width: 60rem;
   text-align: center; }
 
-.Banner-title {
-  margin: 0 0 2rem 0;
-  font-size: 1.6rem;
-  font-weight: 300; }
+.header-img {
+  overflow: hidden;
+  margin: 0 auto 3rem;
+  max-width: 18rem;
+  border-radius: 50%; }
+  .header-img img {
+    display: block; }
 
-.Button {
-  display: inline-block;
-  margin: 0;
-  padding: 1rem 2.8rem;
-  color: #fff;
-  background-color: #67c7cc;
-  border-radius: 0.4rem;
-  -webkit-transition: background 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: background 250ms cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .Button:hover {
-    color: #fff;
-    background-color: #349499; }
+.header-title {
+  font-size: 3.2rem; }
 
-.Social {
+.header-description {
+  font-size: 1.8rem; }
+
+.footer {
+  padding: 6rem 0; }
+
+.footer-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
-.Social-link {
-  margin: 0 1rem; }
+.footer-icon {
+  margin: 0 1rem;
+  font-size: 1.8rem; }
+  .footer-icon i {
+    color: #E0E0E0; }
+  .footer-icon:hover i {
+    color: #9E9E9E; }
 
-.Social-icon {
+.footer-copyright {
   display: block;
-  margin: 0; }
-  .Social-icon path {
-    fill: #ec135e;
-    -webkit-transition: fill 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: fill 250ms cubic-bezier(0.645, 0.045, 0.355, 1); }
+  margin-top: 0.5rem;
+  color: #9E9E9E;
+  font-size: 1.4rem;
+  text-align: center; }
 
-.Social-link:hover .Social-icon path {
-  fill: #8e0b38; }
+.about-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 24rem; }

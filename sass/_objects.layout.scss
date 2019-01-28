@@ -1,0 +1,29 @@
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "about"
+    "about"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+  margin: 0 auto;
+  padding: 3rem;
+  max-width: 96rem;
+
+  @include break(md) {
+    grid-template-areas:
+      "header header"
+      "about about"
+      "footer footer";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.layout-header {
+  grid-area: header;
+}
+
+.layout-footer {
+  grid-area: footer;
+}

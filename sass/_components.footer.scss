@@ -1,0 +1,30 @@
+.footer {
+  padding: 6rem 0;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon {
+  margin: 0 1rem;
+  font-size: 1.8rem;
+
+  i {
+    color: $color-grey-300;
+  }
+
+  &:hover i {
+    color: $color-grey-500;
+  }
+}
+
+.footer-copyright {
+  display: block;
+  margin-top: 0.5rem;
+  color: $color-grey-500;
+  font-size: 1.4rem;
+  text-align: center;
+}

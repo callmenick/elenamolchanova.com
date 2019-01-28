@@ -1,0 +1,24 @@
+.header {
+  margin: 0 auto;
+  max-width: 60rem;
+  text-align: center;
+}
+
+.header-img {
+  overflow: hidden;
+  margin: 0 auto 3rem;
+  max-width: 18rem;
+  border-radius: 50%;
+
+  img {
+    display: block;
+  }
+}
+
+.header-title {
+  font-size: 3.2rem;
+}
+
+.header-description {
+  font-size: 1.8rem;
+}
